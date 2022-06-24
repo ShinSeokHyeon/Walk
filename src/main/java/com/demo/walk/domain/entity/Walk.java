@@ -29,11 +29,11 @@ public class Walk {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long walkId; // 산책ID
 
-    @Column(name = "walkingStart")
-    private Date walkingStart; // 산책 시작 일자 (실제)
+    @Column(name = "walkStartDate")
+    private Date walkStartDate; // 산책 시작 일자 (실제)
 
-    @Column(name = "walkingEnd")
-    private Date walkingEnd; // 산책 종료 일자 (실제)
+    @Column(name = "walkEndDate")
+    private Date walkEndDate; // 산책 종료 일자 (실제)
 
     @Column(name = "smsStatus")
     @Enumerated(EnumType.STRING)
@@ -44,5 +44,8 @@ public class Walk {
 
     @Column(name = "userId")
     private Long userId; // 회원ID
+
+    @Column(name = "dogWalkerId")
+    private Long dogWalkerId; // 도그워커ID
 
 }
